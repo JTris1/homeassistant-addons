@@ -5,7 +5,7 @@ FROM python:slim
 RUN apt-get update -y && \
 	apt-get install -y git jq --no-install-recommends && \
 	mkdir /app && cd /app && \
-	git clone --depth=1 https://github.com/jtrisler/CheckRoyalCaribbeanPrice.git ./ && \
+	git clone --depth=1 https://github.com/JTris1/CheckRoyalCaribbeanPrice.git ./ && \
 	pip install --no-cache-dir --root-user-action=ignore requests Apprise bs4
 
 ENV PYTHONUNBUFFERED=1
@@ -28,13 +28,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="jdeath (https://github.com/jtrisler)" \
+    maintainer="jdeath (https://github.com/JTris1)" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
     org.opencontainers.image.vendor="Home Assistant Add-ons" \
-    org.opencontainers.image.authors="jdeath (https://github.com/jtrisler)" \
+    org.opencontainers.image.authors="jdeath (https://github.com/JTris1)" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/jtrisler" \
+    org.opencontainers.image.url="https://github.com/JTris1" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
